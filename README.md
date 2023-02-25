@@ -1,6 +1,8 @@
 # Sv02-Purge-Bucket with Cura Gcode
 Purge bucket model and gcode for Sovol Sv02 3d printer
 
+Huge thank you to Leigh Hill on the Sv02 Facebook group for the original model and all this code.  I am only compiling it here all together to make it easier to read and setup.
+
 Before you do anything, create a new printer profile in Cura
 
 ## Create new printer profile
