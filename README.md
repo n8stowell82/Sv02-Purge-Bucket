@@ -3,7 +3,13 @@ Purge bucket model and gcode for Sovol Sv02 3d printer
 
 Huge thank you to Leigh Hill on the Sv02 Facebook group for the original model and all this code.  I am only compiling it here all together to make it easier to read and setup.
 
-Before you do anything, create a new printer profile in Cura
+# Assumptions
+The following gcode assumes a print temp of 215. You will want to change the lines in the extruder gcode that look like `M104 S216 ; Set temp to 216 (one degree over print temp)` to one degree more than whatever your print temp is.
+So if you print PLA at 200 you would change the following line from:
+`M104 S216 ; Set temp to 216 (one degree over print temp)`
+to:
+`M104 S216 ; Set temp to 201 (one degree over print temp)`
+
 
 ## Create new printer profile
 Create a new profile so that if you decide this isn't for you, it will be really easy to just ignore these changes by slicing with the original printer profile
@@ -171,3 +177,9 @@ G1 Z-1 F1000 ; Lower nozzle by 1mm
 G90 ; Absolute positioning ON
 M400 ; Wait for finish
 ```
+
+# Additional Slicer Settings
+Per https://youtu.be/Wb-IqPFofsc
+
+- Change "Nozzle Switch Retraction Distance" to 0mm (default is 16)
+- Change "Standby Temperature" to match your 1 degree more setting in the gcode (in this case 216)
