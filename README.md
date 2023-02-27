@@ -6,9 +6,17 @@ Huge thank you to Leigh Hill on the Sv02 Facebook group for the original model a
 # Assumptions
 The following gcode assumes a print temp of 215. You will want to change the lines in the extruder gcode that look like `M104 S216 ; Set temp to 216 (one degree over print temp)` to one degree more than whatever your print temp is.
 So if you print PLA at 200 you would change the following line from:
+
+
 `M104 S216 ; Set temp to 216 (one degree over print temp)`
+
+
 to:
+
+
 `M104 S216 ; Set temp to 201 (one degree over print temp)`
+
+> Note: make sure you apply this change to both extruders!!!!
 
 
 ## Create new printer profile
